@@ -43,17 +43,9 @@ img {
   align-items: center;
   justify-content: flex-end;
   animation: float 3s ease-in-out infinite;
-  will-change: transform; /* Performance optimization */
+  will-change: transform; 
 }
 
-/* Cards Grid */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-bottom: 20px;
-  width: 280px;
-}
 
 
 
