@@ -20,11 +20,13 @@ function About() {
                 <strong>ScorcheTech</strong> is a forward-thinking web development and technology solutions provider, dedicated to creating innovative digital experiences for businesses and individuals. Our mission is to empower brands with modern, efficient, and user-friendly technology, helping them thrive in today’s competitive digital landscape.
                 </p>
 
-                <ul>
-                <li>Cutting-edge technology tailored to your needs.</li>
-                <li>Affordable and scalable solutions for businesses of all sizes.</li>
-                <li>A focus on user experience and responsive designs.</li>
-                </ul>
+                <div className="about-highlight">
+                  <p>Cutting-edge technology tailored to your needs.</p>
+                  <p>Affordable and scalable solutions for businesses of all sizes.</p>
+                  <p>A focus on user experience and responsive designs.</p>
+
+                </div>
+
                 <br />
                 <a href="#contact" class="gradient-button">Let’s Work Together</a>
             </div>

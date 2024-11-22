@@ -1,0 +1,10 @@
+.container{
+  text-align: center;
+  padding: auto;
+}
+
+.about-highlight p{
+  color: white;
+  font-weight: 900;
+  margin:9px;
+}
