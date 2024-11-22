@@ -1,4 +1,5 @@
 import React from 'react'
+import './About.css'
 function About() {
   return (
     <>
@@ -6,13 +7,13 @@ function About() {
                 background: 'linear-gradient(135deg, #D7263D, #FF5733)',
                 color: 'white',
                 padding: '40px 20px',
-                fontSize: '18px',
+                fontSize: '13px',
                 fontWeight: 'normal',
                 textAlign: 'center',
                 borderRadius: '5px',
                 marginBottom:'3rem',
                 overflow:'hidden',
-                height:'100vh'}}>
+                height:'65vh'}}>
             <div class="container">
                 <h1>About ScorcheTech</h1>
                 <p>
@@ -24,6 +25,7 @@ function About() {
                 <li>Affordable and scalable solutions for businesses of all sizes.</li>
                 <li>A focus on user experience and responsive designs.</li>
                 </ul>
+                <br />
                 <a href="#contact" class="gradient-button">Let’s Work Together</a>
             </div>
         </section>
