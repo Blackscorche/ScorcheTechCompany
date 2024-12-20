@@ -1,6 +1,6 @@
 import React from 'react';
-import './hero.css'; // Ensure the CSS file exists and matches
-import rocket from '../assets/rocket.webm'; // Use the correct path to your video
+import './hero.css';
+import rocket from '../assets/rocket.webm';
 
 function hero() {
   return (
@@ -15,7 +15,6 @@ function hero() {
 
         <div className="home-links">
             <a href="#services" className="services-btn gradient-button">Services</a>
-            <a href="#projects" className="project-btn gradient-button">Projects</a>
         </div>
 
       </div>

@@ -1,10 +1,19 @@
-.container{
-  text-align: center;
-  padding: auto;
+.aboutContainer{
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 13%;
 }
 
-.about-highlight p{
-  color: white;
-  font-weight: 900;
-  margin:9px;
+.aboutContainer h1{
+  font-family:sans-serif;
+  font-size: 2rem;
+  color:#D7263D;
+}
+
+.aboutContainer p{
+  text-align: center;
+  line-height: 25px;
 }

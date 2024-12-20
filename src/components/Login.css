@@ -1,0 +1,86 @@
+
+/* Container Styling */
+.loginContainer {
+    position: relative;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 90px;
+    width: 420px;
+    text-align: center;
+    color: white;
+    border-radius: 20%;
+    animation: borderAnimation 6s infinite alternate;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    overflow: hidden;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-radius: 30% 70% 60% 40% / 40% 50% 70% 60%;
+    }
+    50% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
+    }
+    100% {
+        border-radius: 70% 30% 40% 60% / 50% 40% 60% 40%;
+    }
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input {
+    margin-bottom: 15px;
+}
+
+.input input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #555;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input input:focus {
+    border-color: #fff;
+}
+
+.button-container input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff7f50, #ffcc00);
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.button-container input:hover {
+    transform: scale(1.05);
+}
+
+.footer-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}

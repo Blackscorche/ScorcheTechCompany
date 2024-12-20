@@ -1,36 +1,55 @@
-import React from 'react'
-import './Navbar.css'
-import Logo from '../assets/ScorcheTechLogo.png'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa"; // Import burger icon
+import "./Navbar.css";
+import Logo from "../assets/ScorcheTechLogo.png";
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <>
-      <div className="header">
-        <div className="navbar">
-          <div className="logo">
-              <img src={Logo} alt="" />
-              <h4><span className='txtGrad'>Scorche</span>Tech</h4>
-          </div>
-
-          <div className="navlinks">
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Projects</a></li>
-                  <li><a href="#">About</a></li>
-              </ul>
-
-              <button className="gradient-button btn">
-                  Contact Me
-              </button>
-          </div>
-
-
+    <div className="header">
+      <div className="navbar">
+        <div className="logo">
+          <img src={Logo} alt="ScorcheTech Logo" />
+          <h4>
+            <span className="txtGrad">Scorche</span>Tech
+          </h4>
         </div>
 
-      </div>
+        {/* Main Navbar Links */}
+        <div className={`navlinks ${isMenuOpen ? "active" : ""}`}>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/services">Services</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
 
-    </>
-  )
+            {/* Signup button inside the list */}
+            <li className="signup-item">
+              <Link to="/signup">
+                <button className="gradient-button">Signup</button>
+              </Link>
+            </li>
+          </ul>
+        </div>
+
+        {/* Burger Icon */}
+        <div className="burger-icon" onClick={toggleMenu}>
+          <FaBars size={30} color="white" />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Navbar
+export default Navbar;

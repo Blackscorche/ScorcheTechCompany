@@ -1,0 +1,88 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.signUpContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+    background: #1C1C1E; 
+    padding: 50px; 
+    width: 400px; 
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 80px; 
+}
+
+
+
+
+.form {
+    width: 100%;
+}
+
+/* Input Styling */
+.input {
+    margin-bottom: 15px;
+}
+
+.input input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #555;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.input input:focus {
+    border-color: #D7263D; /* Vibrant red */
+}
+
+/* Button Container Styling */
+.button-container input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #D7263D, #FF5733); /* Red to orange */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.button-container input:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #B61E34, #E04D2E); /* Darker red to orange */
+}
+
+/* Footer Links Styling */
+.footer-links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #FF5733; /* Orange */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #D7263D; /* Red */
+}

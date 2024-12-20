@@ -1,0 +1,49 @@
+.card{
+    padding: 11px 11%;
+  
+    display: grid;
+    align-items: center;
+  
+  }
+  
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 6%;
+    border-radius: 13px;
+    border-style: solid;
+    border-color:#D7263D;
+  }
+  
+  .card-body h1{
+    font-family:sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color:#D7263D;
+  }
+  
+  .card-body p{
+    font-size: .8rem;
+  }
+  
+  .card-body img{
+    width: 38%;
+  
+  }
+  
+  
+  .cardLists{
+    display: flex;
+    flex-direction: column;
+    padding:20px 0;
+  }
+  
+  .cardLists p{
+    margin: 4px 0;
+  }
+  
+  .card-text{
+    margin: 0;
+  }
