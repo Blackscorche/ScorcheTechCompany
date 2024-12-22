@@ -7,13 +7,12 @@
   padding: 50px 13%;
 }
 
-.aboutContainer h1{
-  font-family:sans-serif;
-  font-size: 2rem;
-  color:#D7263D;
+
+.aboutContainer h2{
+  font-size:2rem;
+
 }
 
 .aboutContainer p{
   text-align: center;
-  line-height: 25px;
 }

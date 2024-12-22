@@ -24,7 +24,7 @@ const Signup = () => {
                 </div>
             </form>
             <div className="footer-links">
-                <a href="#">Already have an account? Login</a>
+                <a href="/login">Already have an account? Login</a>
             </div>
         </div>
         </section>

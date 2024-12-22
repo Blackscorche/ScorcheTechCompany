@@ -45,7 +45,7 @@ function Navbar() {
 
         {/* Burger Icon */}
         <div className="burger-icon" onClick={toggleMenu}>
-          <FaBars size={30} color="white" />
+          <FaBars size={24} color="white" />
         </div>
       </div>
     </div>

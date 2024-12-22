@@ -5,6 +5,9 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  gap: 3rem;
+  margin-top: 120px;
+
 }
 
 /* Service Image Styling */

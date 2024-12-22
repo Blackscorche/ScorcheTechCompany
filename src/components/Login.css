@@ -1,43 +1,44 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loginContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Container Styling */
-.loginContainer {
+.container {
     position: relative;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 90px;
-    width: 420px;
+    background: #1C1C1E; 
+    padding: 50px; 
+    width: 400px; 
     text-align: center;
     color: white;
-    border-radius: 20%;
-    animation: borderAnimation 6s infinite alternate;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    border-radius: 12px;
     overflow: hidden;
+    margin-top: 80px; 
 }
 
-@keyframes borderAnimation {
-    0% {
-        border-radius: 30% 70% 60% 40% / 40% 50% 70% 60%;
-    }
-    50% {
-        border-radius: 50% 50% 60% 40% / 40% 60% 50% 50%;
-    }
-    100% {
-        border-radius: 70% 30% 40% 60% / 50% 40% 60% 40%;
-    }
+
+
+
+.form {
+    width: 100%;
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
+/* Input Styling */
 .input {
     margin-bottom: 15px;
 }
 
 .input input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: 1px solid #555;
     border-radius: 25px;
     background: transparent;
@@ -48,39 +49,42 @@ h1 {
 }
 
 .input input:focus {
-    border-color: #fff;
+    border-color: #D7263D; /* Vibrant red */
 }
 
+/* Button Container Styling */
 .button-container input {
     width: 100%;
-    padding: 10px 15px;
+    padding: 12px 15px;
     border: none;
     border-radius: 25px;
-    background: linear-gradient(45deg, #ff7f50, #ffcc00);
-    color: #000;
+    background: linear-gradient(45deg, #D7263D, #FF5733); /* Red to orange */
+    color: #fff;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .button-container input:hover {
     transform: scale(1.05);
+    background: linear-gradient(45deg, #B61E34, #E04D2E); /* Darker red to orange */
 }
 
+/* Footer Links Styling */
 .footer-links {
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
     font-size: 14px;
+    
 }
 
 .footer-links a {
-    color: #ffcc00;
+    color: #FF5733; /* Orange */
     text-decoration: none;
     transition: color 0.3s ease;
+    
+    margin: 15px 10px;
 }
 
 .footer-links a:hover {
-    color: #fff;
+    color: #D7263D; /* Red */
 }

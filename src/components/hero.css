@@ -56,5 +56,10 @@ video{
         margin-top: 6rem;
         margin-bottom: 6rem;
     }
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 }

@@ -6,7 +6,7 @@ import Services from './components/services';
 import About from './components/About';
 import Footer from './components/Footer';
 import Signup from './components/signup'; // Add your Signup component
-
+import Login from './components/Login';
 function App() {
   return (
     <Router>
@@ -23,6 +23,8 @@ function App() {
         } />
         <Route path="/signup" element={<Signup />} />
         <Route path="/services" element={<Services />} />
+        
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
