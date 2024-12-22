@@ -1,6 +1,6 @@
 /* Service Content Layout */
 .service-content {
-  padding: 11px 11%;
+  padding: 30px 11%;
   height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
