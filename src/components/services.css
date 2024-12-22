@@ -1,4 +1,5 @@
 /* Service Content Layout */
+
 .service-content {
   padding: 30px 11%;
   height: 80vh;
@@ -102,28 +103,14 @@
 
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
-  .services-cards {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  .services-page{
+    padding: 11px 8%;
   }
+  
 
   .service-content {
     grid-template-columns: 1fr; /* Stack content vertically */
     height: auto;
     padding: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .services-cards {
-    grid-template-columns: 1fr; /* 1 column on small screens */
-  }
-
-  .carousel-container {
-    padding: 0 5%; /* Reduce padding for smaller screens */
-  }
-
-  .card {
-    width: 90%; /* Adjust card width for smaller screens */
-    height: auto;
   }
 }
