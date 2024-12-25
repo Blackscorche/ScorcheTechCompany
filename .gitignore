@@ -23,7 +23,3 @@ dist-ssr
 *.sln
 *.sw?
 
-# .gitignore
-
-# Ignore .env file that stores sensitive information
-.env
