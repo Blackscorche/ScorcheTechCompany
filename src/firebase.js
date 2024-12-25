@@ -2,14 +2,15 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth"; // Import Firebase Auth
 import { getFirestore } from "firebase/firestore"; // If using Firestore
 
+// Firebase configuration from environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyBpl5oKubJx-C3kmCJzmKu_dFsWScB8zT4",
-  authDomain: "scorchetech-5ddca.firebaseapp.com",
-  projectId: "scorchetech-5ddca",
-  storageBucket: "scorchetech-5ddca.appspot.com",
-  messagingSenderId: "529641477963",
-  appId: "1:529641477963:web:28455c4d7469fa6ec63ace",
-  measurementId: "G-3S9KE3NYC6"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
