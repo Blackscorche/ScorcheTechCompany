@@ -45,7 +45,7 @@ const ServicesCarousel = () => {
     },
     {
       icon: "https://via.placeholder.com/80",
-      title: "Mobile App Development",
+      title: "App Development",
       description:
         "Build cutting-edge mobile apps for Android and iOS platforms.",
     },
