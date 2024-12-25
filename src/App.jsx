@@ -7,6 +7,11 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Signup from './components/signup'; // Add your Signup component
 import Login from './components/Login';
+
+import ForgotPassword from './components/forgotpassword';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function App() {
   return (
     <Router>
@@ -23,7 +28,7 @@ function App() {
         } />
         <Route path="/signup" element={<Signup />} />
         <Route path="/services" element={<Services />} />
-        
+        <Route path='/forgotPassword' element={<ForgotPassword/>}/>
         <Route path="/login" element={<Login />} />
       </Routes>
     </Router>

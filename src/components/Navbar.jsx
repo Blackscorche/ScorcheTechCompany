@@ -37,7 +37,7 @@ function Navbar() {
             {/* Signup button inside the list */}
             <li className="signup-item">
               <Link to="/signup">
-                <button className="gradient-button">Signup</button>
+                <button className="gradient-button btn">Signup</button>
               </Link>
             </li>
           </ul>

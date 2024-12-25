@@ -1,7 +1,6 @@
 import React from 'react';
 import './hero.css';
 import rocket from '../assets/rocket.webm';
-
 function hero() {
   return (
     <section className="hero-section"> 
@@ -22,6 +21,8 @@ function hero() {
       <div className="image">
         <video src={rocket} autoPlay muted loop className="rocket-video"></video>
       </div>
+
+      
     </section>
   );
 }

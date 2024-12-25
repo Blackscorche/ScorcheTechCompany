@@ -1,0 +1,121 @@
+/* General Styles */
+.services-carousel {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .carousel-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+  }
+  
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-icon {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 16px;
+  }
+  
+  .card h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 16px;
+  }
+  
+  .more-btn {
+    background: linear-gradient(135deg, #d7263d, #ff5733);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .more-btn:hover {
+    background: linear-gradient(135deg, #ff5733, #d7263d);
+  }
+  
+  /* Customize slick dots (pagination) */
+  .slick-dots {
+    bottom: -30px;
+    display: flex !important;
+    justify-content: center;
+  }
+  
+  .slick-dots li button:before {
+    color: #3498db !important;  /* Set the dots color to ScorcheTech's color */
+    font-size: 16px;
+    opacity: 0.7;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #ff5733 !important;  /* Active dot color */
+    opacity: 1;
+  }
+  
+  /* Customize arrows */
+  .slick-prev, .slick-next {
+    font-size: 30px;
+    color: #d7263d;
+    z-index: 1;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    font-family: "slick";
+    font-size: 30px;
+    line-height: 1;
+    color: #d7263d; 
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    color: #ff5733; /* Change color when hovered */
+  }
+  
+  .slick-prev {
+    left: 10px;
+  }
+  
+  .slick-next {
+    right: 10px;
+  }
+  
+
+  
+  /* Stop autoplay when mouse is over the carousel (only for desktop) */
+  @media (min-width: 1024px) {
+    .services-carousel .slick-track {
+      pointer-events: auto;
+    }
+  
+    .services-carousel:hover .slick-track {
+      pointer-events: none; /* Pause autoplay when mouse is over */
+    }
+  }
+  

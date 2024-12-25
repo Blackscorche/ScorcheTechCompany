@@ -1,40 +1,10 @@
-import React from 'react';
-import Slider from 'react-slick';
-import './services.css';
-import serviceImg from '../assets/services.png';
-import WebLogo from '../assets/responsive.png';
+import React from "react";
+import "./services.css";
+import serviceImg from "../assets/services.png";
+
+import ServicesCarousel from "./ServicesCarousel";
 
 function Services() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    centerMode: true, // Center slides on the carousel
-    centerPadding: '20px', // Adjust this for centering slides
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  const cards = [
-    { id: 1, title: 'Website Development', description: 'Custom-built websites tailored to your needs.' },
-    { id: 2, title: 'SEO Optimization', description: 'Boost your website visibility with SEO services.' },
-    { id: 3, title: 'UI/UX Design', description: 'User-friendly and modern interfaces for great experiences.' },
-    { id: 4, title: 'Mobile App Development', description: 'We create mobile applications for iOS and Android.' },
-    { id: 5, title: 'E-commerce Solutions', description: 'Secure and scalable e-commerce platforms.' },
-  ];
-
   return (
     <section className="services-page">
       {/* Main Content Section */}
@@ -52,6 +22,8 @@ function Services() {
         </div>
       </div>
 
+      {/* Services Carousel Section */}
+      <ServicesCarousel />
     </section>
   );
 }

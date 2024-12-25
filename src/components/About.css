@@ -1,18 +1,86 @@
-.aboutContainer{
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 50px 13%;
-}
-
-
-.aboutContainer h2{
-  font-size:2rem;
-
-}
-
-.aboutContainer p{
+/* AboutUs.css */
+.about-us {
+  background-color: #f4f4f9; /* Light background for contrast */
+  padding: 4rem 2rem;
   text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px; /* Rounded corners for a modern look */
+  margin: 15px 10px; /* Slight margin to prevent content from touching edges */
+}
+
+.about-us-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-us-text {
+  flex: 1;
+  max-width: 600px;
+  margin-right: 2rem;
+}
+
+.about-us-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-out;
+}
+
+.about-us-description {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.about-us-image {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 400px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-container {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .about-us-text {
+    margin-right: 0;
+  }
+
+  .about-us-title {
+    font-size: 2rem;
+  }
+
+  .about-us-img {
+    max-height: 350px;
+  }
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import './login.css';
+import './Login.css';
 
 const Login = () => {
     return (
         <div className="loginContainer">
             <div className="container">
                 <h2>Login</h2>
-                <form className="form" action="#" method="POST">
+                <form className="form">
                     <div className="input">
                         <input type="text" id="username" placeholder="Username" required />
                     </div>
@@ -18,8 +18,8 @@ const Login = () => {
                     </div>
                 </form>
                 <div className="footer-links">
-                    <a href="#">Forget Password</a>
-                    <a href="#">Signup</a>
+                    <a href="forgotPassword">Forget Password</a>
+                    <a href="signup">Signup</a>
                 </div>
             </div>
 
