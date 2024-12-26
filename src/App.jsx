@@ -1,11 +1,10 @@
-import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Hero from "./components/hero"; // Ensure the case matches
-import Services from "./components/Services"; // Ensure the case matches
+import Services from "./components/services"; // Ensure the case matches
 import About from "./components/About"; // Ensure the case matches
-import Signup from "./components/Signup"; // Ensure the case matches
+import Signup from "./components/signup"; // Ensure the case matches
 import Login from "./components/Login"; // Ensure the case matches
 import ForgotPassword from "./components/ForgotPassword"; // Ensure the case matches
 import Home from "./components/home"; // Ensure the case matches
