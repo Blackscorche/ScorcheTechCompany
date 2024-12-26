@@ -2,13 +2,14 @@
   margin-bottom: 2rem;
 }
 .about-us {
-  background-color: #f4f4f9; /* Light background for contrast */
+  background-color: transparent; /* Light background for contrast */
   padding: 4rem 2rem;
   text-align:left;
   overflow: hidden;
   position: relative;
   border-radius: 15px; /* Rounded corners for a modern look */
   margin: 15px 10px; /* Slight margin to prevent content from touching edges */
+  margin-top: 7rem;
 }
 
 .about-us-container {

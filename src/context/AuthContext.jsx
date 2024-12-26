@@ -1,30 +1,34 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase"; // Import Firebase auth
+import React, { useContext, useState, useEffect } from "react";
+import { auth } from "../firebase"; // Import your Firebase auth configuration
+import { onAuthStateChanged } from "firebase/auth"; // Adjust if not using Firebase
 
-// Create the Auth Context
-const AuthContext = createContext();
+const AuthContext = React.createContext();
 
-// Provide the Auth Context
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+export function useAuth() {
+  return useContext(AuthContext);
+}
+
+export function AuthProvider({ children }) {
+  const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Monitor authentication state
   useEffect(() => {
+    // Listen for authentication state changes
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
+      setCurrentUser(user);
+      setLoading(false); // Ensure loading stops once user state is determined
     });
-    return unsubscribe;
+
+    return unsubscribe; // Cleanup subscription on unmount
   }, []);
 
+  const value = {
+    currentUser, // Provide current user to the app
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading }}>
-      {!loading && children}
+    <AuthContext.Provider value={value}>
+      {!loading && children} {/* Render children only when loading completes */}
     </AuthContext.Provider>
   );
-};
-
-// Custom Hook to Use Auth Context
-export const useAuth = () => useContext(AuthContext);
+}

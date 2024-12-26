@@ -1,12 +1,11 @@
-import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const PrivateRoute = ({ children }) => {
-  const { user } = useAuth(); // Get the user state from Auth Context
+function PrivateRoute({ children }) {
+  const { currentUser } = useAuth();
 
-  // If no user is logged in, redirect to the login page
-  return user ? children : <Navigate to="/login" />;
-};
+  // Allow access to the route if a user is logged in; otherwise, redirect to login
+  return currentUser ? children : <Navigate to="/login" />;
+}
 
 export default PrivateRoute;

@@ -1,0 +1,22 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center align the text */
+    background-color: #f9f9f9; /* Optional: Add a light background */
+    padding: 20px; /* Optional: Add some padding for smaller screens */
+    margin-top: 7rem;
+  }
+  
+  .home-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .home-container p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
