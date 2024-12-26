@@ -8,7 +8,7 @@ import About from "./components/About"; // Ensure the case matches
 import Signup from "./components/Signup"; // Ensure the case matches
 import Login from "./components/Login"; // Ensure the case matches
 import ForgotPassword from "./components/ForgotPassword"; // Ensure the case matches
-import Home from "./components/Home"; // Ensure the case matches
+import Home from "./components/home"; // Ensure the case matches
 import PrivateRoute from "./components/PrivateRoute"; 
 import { AuthProvider } from "./context/AuthContext"; 
 import "slick-carousel/slick/slick.css";
