@@ -2,7 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Hero from "./components/Hero"; // Ensure the case matches
+import Hero from "./components/hero"; // Ensure the case matches
 import Services from "./components/Services"; // Ensure the case matches
 import About from "./components/About"; // Ensure the case matches
 import Signup from "./components/Signup"; // Ensure the case matches
