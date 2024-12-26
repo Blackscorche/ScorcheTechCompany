@@ -2,15 +2,15 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Hero from "./components/hero";
-import Services from "./components/services";
-import About from "./components/About";
-import Signup from "./components/signup";
-import Login from "./components/Login";
-import ForgotPassword from "./components/forgotpassword";
-import Home from "./components/home"; // Import Home component
-import PrivateRoute from "./components/PrivateRoute"; // Import PrivateRoute
-import { AuthProvider } from "./context/AuthContext"; // Import AuthProvider
+import Hero from "./components/Hero"; // Ensure the case matches
+import Services from "./components/Services"; // Ensure the case matches
+import About from "./components/About"; // Ensure the case matches
+import Signup from "./components/Signup"; // Ensure the case matches
+import Login from "./components/Login"; // Ensure the case matches
+import ForgotPassword from "./components/ForgotPassword"; // Ensure the case matches
+import Home from "./components/Home"; // Ensure the case matches
+import PrivateRoute from "./components/PrivateRoute"; 
+import { AuthProvider } from "./context/AuthContext"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -19,24 +19,19 @@ function App() {
     <AuthProvider>
       <Router>
         <div>
-          {/* Navbar appears on every page */}
           <Navbar />
-
-          {/* App Routes */}
           <Routes>
-            {/* Default route: Show Hero, Services, About */}
+            {/* Main page with Hero, Services, and About sections */}
             <Route
               path="/"
               element={
-                <PrivateRoute>
+                <div>
                   <Hero />
-                  <Services/>
-                  <About/>
-
-                </PrivateRoute>
+                  <Services />
+                  <About />
+                </div>
               }
             />
-
 
             {/* Protected route for Home */}
             <Route
@@ -58,8 +53,6 @@ function App() {
             {/* Fallback route */}
             <Route path="*" element={<div>404 Page Not Found</div>} />
           </Routes>
-
-          {/* Footer appears on every page */}
           <Footer />
         </div>
       </Router>

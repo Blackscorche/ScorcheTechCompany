@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+// Login.js
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase"; // Import firebase auth
+import { auth } from "../firebase"; 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Login.css";
-import { useAuth } from "../context/AuthContext"; // Import AuthContext
+import { useAuth } from "../context/AuthContext"; 
+import ClipLoader from "react-spinners/ClipLoader"; // Import the spinner
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -14,8 +16,14 @@ const Login = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); // For redirection
-  const { user } = useAuth(); // Get user from AuthContext
+  const navigate = useNavigate();
+  const { currentUser } = useAuth(); // Get user from AuthContext
+
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/home");
+    }
+  }, [currentUser, navigate]);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -31,19 +39,14 @@ const Login = () => {
 
     try {
       setLoading(true);
-
-      // Firebase Login
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      console.log("User logged in:", user);
+      console.log("User logged in:", userCredential.user);
 
-      // Show success toast
       toast.success("Login successful! Redirecting...", {
         position: "top-center",
         autoClose: 2000,
       });
 
-      // Redirect to homepage
       setTimeout(() => navigate("/home"), 2000);
     } catch (error) {
       console.error("Login failed:", error.message);
@@ -85,6 +88,11 @@ const Login = () => {
             <input type="submit" value={loading ? "Signing in..." : "Sign in"} disabled={loading} />
           </div>
         </form>
+        {loading && (
+          <div className="spinner-container">
+            <ClipLoader color="#000" loading={loading} size={50} />
+          </div>
+        )}
         <div className="footer-links">
           <a href="/forgotPassword">Forgot Password?</a>
           <a href="/signup">Signup</a>

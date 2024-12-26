@@ -87,3 +87,33 @@
     color: #D7263D; /* Red */
 }
 
+.google-signin {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-button {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Google red */
+    color: #B61E34;
+    border: none;
+    padding: 3px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all .2s;
+}
+
+.google-button:hover {
+    background-color: #c1351d;
+    color: #fff;
+}
+
+.google-icon {
+    width: 50px; /* Adjust icon size */
+    height: auto;
+    margin-right: 10px; /* Space between icon and text */
+}

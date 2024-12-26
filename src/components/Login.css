@@ -88,3 +88,11 @@
 .footer-links a:hover {
     color: #D7263D; /* Red */
 }
+
+/* Add this to your Login.css */
+.spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add some space above the spinner */
+  }

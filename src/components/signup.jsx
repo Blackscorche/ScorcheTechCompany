@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { auth } from '../firebase';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { doc, setDoc, getDocs, collection, query, where } from 'firebase/firestore';
 import { db } from '../firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
+import ClipLoader from 'react-spinners/ClipLoader';
+import GoogleIcon from '../assets/google_logo.svg'
 import './Signup.css';
 
 const Signup = () => {
@@ -16,6 +19,7 @@ const Signup = () => {
     });
 
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         const { id, value } = e.target;
@@ -27,16 +31,7 @@ const Signup = () => {
         const { username, email, password, confirmPassword } = formData;
 
         if (password !== confirmPassword) {
-            toast.error('Passwords do not match.', {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
+            toast.error('Passwords do not match.', { position: "top-right", autoClose: 3000 });
             return;
         }
 
@@ -49,16 +44,7 @@ const Signup = () => {
             const querySnapshot = await getDocs(q);
 
             if (!querySnapshot.empty) {
-                toast.error('Username is already taken.', {
-                    position: "top-right",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                });
+                toast.error('Username is already taken.', { position: "top-right", autoClose: 3000 });
                 return;
             }
 
@@ -72,33 +58,33 @@ const Signup = () => {
                 email,
             });
 
-            toast.success('Signup successful! Redirecting to homepage...', {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-            });
-
-            // Redirect to home page after a delay
-            setTimeout(() => {
-                window.location.href = '/';
-            }, 3000);
+            toast.success('Signup successful! Redirecting to homepage...', { position: "top-right", autoClose: 3000 });
+            navigate("/"); // Redirect to home immediately
 
         } catch (err) {
-            toast.error(err.message, {
-                position: "top-right",
-                autoClose: 3000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
+            toast.error(err.message, { position: "top-right", autoClose: 3000 });
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleGoogleSignIn = async () => {
+        const provider = new GoogleAuthProvider();
+        try {
+            setLoading(true);
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user;
+
+            // Save user info to Firestore
+            await setDoc(doc(db, 'users', user.uid), {
+                username: user.displayName,
+                email: user.email,
             });
+
+            toast.success('Google signup successful! Redirecting to homepage...', { position: "top-right", autoClose: 3000 });
+            navigate("/"); // Redirect to home immediately
+        } catch (err) {
+            toast.error(err.message, { position: "top-right", autoClose: 3000 });
         } finally {
             setLoading(false);
         }
@@ -156,11 +142,21 @@ const Signup = () => {
                             disabled={loading}
                         />
                     </div>
+                    {loading && (
+                        <div className="spinner-container">
+                            <ClipLoader color="#000" loading={loading} size={50} />
+                        </div>
+                    )}
                     <div className="footer-links">
                         <a href="/login">Already have an account? Login</a>
                     </div>
-                    
                 </form>
+                <div className="google-signin">
+                    <button onClick={handleGoogleSignIn} disabled={loading} className="google-button">
+                        <img src={GoogleIcon} alt="Google logo" className="google-icon" />
+                        Sign in with Google
+                    </button>
+                </div>
             </div>
             <ToastContainer />
         </section>
