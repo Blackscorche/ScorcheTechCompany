@@ -26,10 +26,13 @@ function App() {
           <Routes>
             {/* Default route: Show Hero, Services, About */}
             <Route
-              path="/home"
+              path="/"
               element={
                 <PrivateRoute>
-                  <Home />
+                  <Hero />
+                  <Services/>
+                  <About/>
+
                 </PrivateRoute>
               }
             />
