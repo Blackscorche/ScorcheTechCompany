@@ -20,10 +20,11 @@ function App() {
         <div>
           <Navbar />
           <Routes>
+            {/* Protect the homepage */}
             <Route
               path="/"
               element={
-                <PrivateRoute> {/* Protect the homepage */}
+                <PrivateRoute>
                   <>
                     <Hero />
                     <Services />
@@ -33,10 +34,16 @@ function App() {
                 </PrivateRoute>
               }
             />
+
+            {/* Public routes */}
             <Route path="/signup" element={<Signup />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/forgotPassword" element={<ForgotPassword />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/footer" element={<Footer />} />
+
+            {/* Fallback route */}
             <Route path="*" element={<div>404 Page Not Found</div>} />
           </Routes>
         </div>

@@ -44,7 +44,7 @@ const Login = () => {
       });
 
       // Redirect to homepage
-      setTimeout(() => navigate("/"), 2000);
+      setTimeout(() => navigate("/home"), 2000);
     } catch (error) {
       console.error("Login failed:", error.message);
       toast.error("Login failed: " + error.message, {

@@ -85,8 +85,7 @@
   .gradient-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    background: transparent;
-    border: solid 1px #ffdee2;
+    background: linear-gradient(135deg, #ff5733, #d7263d);
     color: #ffdee2;
   }
   
@@ -111,11 +110,7 @@
     cursor: pointer;
   }
   
-  /* Desktop view - keep the Signup button visible */
-  .signup-item {
-    display: block;
-  }
-  
+
   /* Hide the Signup button on mobile by default */
   @media screen and (max-width: 768px) {
     .navbar {
@@ -128,7 +123,7 @@
   
     /* Hide the Signup button in the navbar for mobile */
     .navlinks .btn {
-      display: none;
+      margin: auto;
     }
   
     /* Hide the links by default in mobile */

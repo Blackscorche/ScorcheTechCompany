@@ -14,7 +14,7 @@ function Services() {
           <p>
             Explore our services, and if you have any doubts, take a look at our projects for proof of our expertise.
           </p>
-          <a href="#" className="gradient-button">Projects</a>
+          <a href="#" className="gradient-button">Services</a>
         </div>
 
         <div className="service-img">
