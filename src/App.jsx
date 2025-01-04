@@ -12,7 +12,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./context/AuthContext"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <AuthProvider>

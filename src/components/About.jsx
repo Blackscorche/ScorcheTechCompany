@@ -1,7 +1,7 @@
 // AboutUs.js
 import React from "react";
 import "./About.css"; // Import the custom styles
-
+import bannerPic from '../assets/about.png'
 const About = () => {
   return (
     <section className="about-us">
@@ -24,7 +24,7 @@ const About = () => {
         </div>
         <div className="about-us-image">
           <img
-            src="https://via.placeholder.com/500" // Placeholder for now, replace with your image
+            src={bannerPic} // Placeholder for now, replace with your image
             alt="ScorcheTech Team"
             className="about-us-img"
           />

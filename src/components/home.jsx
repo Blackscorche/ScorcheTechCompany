@@ -3,8 +3,16 @@ import './home.css';
 function Home() {
   return (
     <div className="home-container">
-      <h1>Welcome to the Home Page!</h1>
-      <p>This page is only accessible to logged-in users.</p>
+      <div className="sidebar">
+
+      </div>
+      <div className="content">
+        {/* this will contain a grid of cards which will show the users what to order  */}
+        <div className="options-cards">
+
+        </div>
+        .
+      </div>
     </div>
   );
 }
